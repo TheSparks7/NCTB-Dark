@@ -1,0 +1,431 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+*
+button {
+    position: absolute;
+    top:5%;
+    right: 2;
+    background-color: blueviolet;
+    color: #fff;
+    border:none; 
+    border-radius:15px; 
+    padding:15px;
+    height:50px; 
+    width: 120px;
+	min-height: auto;
+	max-width: auto;
+    cursor: pointer;
+    font-size:clamp(1rem, 1rem + 10vw, 1rem);
+  }
+  button:hover {
+    color: rgb(47, 133, 29);
+    transform: translateZ(10px);
+    background-color: aliceblue;
+    box-shadow: 0px 5px 100px 0px rgba(255, 255, 255, 0.5);
+    transition: all 0.4s ease-in;
+  }
+  h1 {
+      padding: 5px;
+      transition: all 0.4s ease-in;
+  }
+  img {
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    margin-bottom: 0;
+    margin-left: 0px;
+    margin-right: 0px;
+    border-bottom-right-radius:5px ;
+  }
+
+body
+{
+	justify-content: center;
+	min-height: 100vh;
+  justify-content: center;
+  align-items: center;
+
+}
+ul
+{
+	position: relative;
+	display: flex;
+	gap: 25px;
+  margin-top: -100px;
+}
+ul li
+{
+	position: relative;
+	list-style: none;
+	width: 60px;
+	height: 60px;
+	background: #fff;
+	border-radius: 60px;
+	cursor: pointer;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+	transition: 0.5s;
+}
+ul li:hover
+{
+	width: 180px;
+	box-shadow: 0 10px 25px rgba(0,0,0,0);
+}
+ul li::before
+{
+	content: '';
+	position: absolute;
+	inset: 0;
+	border-radius: 60px;
+	background: linear-gradient(45deg,var(--i),var(--j));
+	opacity: 0;
+	transition: 0.5s;
+}
+ul li:hover::before
+{
+	opacity: 1;
+}
+ul li::after
+{
+	content: '';
+	position: absolute;
+	top: 10px;
+	width: 100%;
+	height: 100%;
+	border-radius: 60px;
+	background: linear-gradient(45deg,var(--i),var(--j));
+	transition: 0.5s;
+	filter: blur(15px);
+	z-index: -1;
+	opacity: 0;
+}
+ul li:hover::after
+{
+	opacity: 0.5;
+}
+ul li ion-icon
+{
+	color: #777;
+	font-size: 1.75em;
+	transition: 0.5s;
+	transition-delay: 0.25s;
+}
+ul li:hover ion-icon
+{
+	transform: scale(0);
+	color: #fff;
+	transition-delay: 0s;
+}
+ul li span
+{
+	position: absolute;
+}
+ul li .title
+{
+	color: #fff;
+	font-size: 1.1em;
+	text-transform: uppercase;
+	letter-spacing: 0.1em;
+	transform: scale(0);
+	transition: 0.5s;
+	transition-delay: 0s;
+}
+ul li:hover .title
+{
+	transform: scale(1);
+	transition-delay: 0.25s;
+}
+
+.abox {
+	                top: -930px;
+					margin: 40px;
+					margin-left: 75px;
+					margin-right: 500px;
+					position: relative;
+					width: 150px;
+					height:150px;
+					background-color: rgba(139, 99, 99, 0.1);
+					justify-content: center;
+					align-items: center;
+					transform: translateY(50px);
+					transition: 1s;
+					border-radius: 50%;
+					box-shadow: 50px 30px 50px 2px rgba(22, 21, 21, 0.9),
+					inset 1px 1px 30px 1px rgba(22, 21, 21, 0.9);
+					animation-name: ballimation;
+					animation-duration: 10s;
+					animation-iteration-count: infinite;
+	                animation-direction: alternate;
+					
+}
+@keyframes ballimation {
+	0%  {bottom: 0px;}
+	5%  {bottom: 5px;}
+	10% {bottom: 10px;}
+	15% {bottom: 15px;}
+	20% {bottom: 20px;}
+	25% {bottom: 25px;}
+	30% {bottom: 30px;}
+	35% {bottom: 35px;}
+	40% {bottom: 40px;}
+	45% {bottom: 45px;}
+	50% {bottom: 50px;}
+	55% {bottom: 50px}
+	60% {bottom: 45px;}
+	65% {bottom: 40px;}
+	70% {bottom: 35px;}
+	75% {bottom: 30px;}
+	80% {bottom: 25px;}
+	85% {bottom: 20px;}
+	90% {bottom: 15px;}
+	95% {bottom: 10px;}
+	100% {bottom:0px;}
+}
+.hovertext {
+  position: relative;
+}
+
+.hovertext:before {
+  content: attr(data-hover);
+  visibility: visible;
+  opacity: 0;
+  width: 140px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 5px;
+  padding: 5px 0;
+  transition: opacity 1s ease-in-out;
+  overflow: visible;
+  position: absolute;
+  z-index: 1;
+  left: 0;
+  top: 110%;
+}
+
+.hovertext:hover:before {
+  opacity: 1;
+  visibility: visible;
+}
+.redball
+{
+	position: relative;
+	width: 120px;
+	height: 120px;
+	background:linear-gradient(150deg,rgb(255, 60, 0), #442AC6);
+	opacity: 1;
+	border-radius: 50%;
+	padding:15px;
+    min-height:30px; 
+    min-width: 120px;
+	left: 75px;
+	margin-bottom: 1000px;
+	margin-top: -1070px;
+	overflow: hidden;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	animation-name: redball;
+	animation-duration: 3s;
+	animation-iteration-count: infinite;
+	animation-direction: alternate-reverse;
+	font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+	@keyframes redball {
+			0% {bottom: 0px;}
+			5% {bottom: 5px;}
+			10% {bottom: 10px;}
+			15% {bottom: 15px;}
+			20% {bottom: 20px;}
+			25% {bottom: 25px;}
+			30% {bottom: 30px;}
+			35% {bottom: 35px;}
+			40% {bottom: 40px;}
+			45% {bottom: 45px;}
+			50% {bottom: 50px;}
+
+			55% {bottom: 50px}
+			60% {bottom: 45px;}
+			65% {bottom: 40px;}
+			70% {bottom: 35px;}
+			75% {bottom: 30px;}
+			80% {bottom: 25px;}
+			85% {bottom: 20px;}
+			90% {bottom: 15px;}
+			95% {bottom: 10px;}
+			100% {bottom:0px;}
+	}
+.redball:hover {
+	position: relative;
+	width: 250px;
+	height: 250px;
+	background:linear-gradient(150deg,rgb(255, 60, 0), blueviolet);
+	opacity: 1;
+	border-radius: 50%;
+	padding:15px;
+    min-height:30px; 
+    min-width: 120px;
+	left: 5px;
+	margin-bottom: 1000px;
+	margin-top: -1070px;
+	overflow: hidden;
+	transition: all 1s ease-in-out;
+	font-size: 25px;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	color: rgb(33, 2, 51);
+	font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+
+
+.orangeball {
+	position: relative;
+	width: 120px;
+	height: 120px;
+	background:linear-gradient(150deg,rgb(255, 60, 0), #442AC6);
+	opacity: 80%;
+	border-radius: 50%;
+	padding:15px;
+    min-height:30px; 
+    min-width: 120px;
+	left: 1159px;
+	margin-bottom: 1000px;
+	margin-top: -1070px;
+	overflow: hidden;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	animation-name: myu;
+	animation-duration: 3s;
+	font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+	@keyframes myu {
+		0%{
+			margin-bottom: -1000px;
+	        margin-top: 950px;
+		}
+		5%  {bottom: 40px;}
+		10% {bottom: 60px;}
+		15% {bottom: 80px;}
+		20% {bottom: 90px;}
+		25% {bottom: 160px;}
+		30% {bottom: 90px;}
+		35% {bottom: 80px;}
+		40% {bottom: 60px}
+		45% {bottom: 40px}
+		50% {bottom: 0px;}
+		55% {bottom: 20px;}
+		60% {bottom: 40px;}
+		65% {bottom: 60px;}
+		70% {bottom: 80px;}
+		75% {bottom: 100px;}
+		80% {bottom: 80px;}
+		85% {bottom: 60px;}
+		90% {bottom: 40px;}
+		95% {bottom: 20px;}
+		100% {
+			margin-bottom: 1000px;
+	        margin-top: -1070px;
+		    bottom: 10px;
+		}
+	}
+		.orangeball {
+		
+			position: relative;
+			width: 120px;
+			height: 120px;
+			background:linear-gradient(150deg,rgb(255, 60, 0), #442AC6);
+			opacity: 1;
+			border-radius: 50%;
+			padding:15px;
+			min-height:30px; 
+			min-width: 120px;
+			left: 1000px;
+			margin-bottom: 1000px;
+			margin-top: -1070px;
+			box-shadow: 15px 5px 100px 15px rgba(129, 197, 233, 0.5);
+			overflow: hidden;
+			justify-content: center;
+			align-items: center;
+			text-align: center;
+			animation-name: myu;
+			animation-duration: 3s;
+			animation-fill-mode: forwards;
+			font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+			animation-name: orangeballbouncinganimation;
+			animation-duration: 4s;
+			animation-iteration-count: infinite;
+			animation-direction: alternate;
+		}
+		@keyframes orangeballbouncinganimation {
+		0%  {bottom:0;}
+		5%  {bottom: 10px;}
+		10% {bottom: 20px;}
+		15% {bottom: 30px;}
+		20% {bottom: 45px;}
+		25% {bottom: 80px;}
+		30% {bottom: 45px;}
+		35% {bottom: 40px;}
+		40% {bottom: 30px}
+		45% {bottom: 20px}
+		50% {bottom: 0px;}
+		55% {bottom: 10px;}
+		60% {bottom: 20px;}
+		65% {bottom: 30px;}
+		70% {bottom: 40px;}
+		75% {bottom: 50px;}
+		80% {bottom: 40px;}
+		85% {bottom: 30px;}
+		90% {bottom: 25px;}
+		95% {bottom: 20px;}
+		100% {bottom:10px;}
+		}
+		.textb 	{
+			font-size:clamp(1rem, 1rem + 10vw, 10rem);
+		}
+		.container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.box {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 20px;
+    flex: 1 1 calc(50% - 40px);
+    box-sizing: border-box;
+	margin:2vh;
+    transition: transform 0.3s, box-shadow 0.3s;
+    max-width: calc(50% - 40px);
+}
+
+.box:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 40px rgba(0, 0, 0, 0.2);
+}
+
+h2 {
+    font-size: 1.5em;
+    margin: 0 0 10px;
+    color: #333;
+}
+
+p {
+    font-size: 1em;
+    color: #555;
+}
+
+@media (max-width: 768px) {
+    .box {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+}

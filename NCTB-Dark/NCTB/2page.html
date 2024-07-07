@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ball</title>
+
+</head>
+<style>
+    .circle {
+    
+        background-image: linear-gradient(to right, #ff512f, #f09819);
+        border-radius: 50%;
+        width: 160px;
+        height: 160px;
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+
+        animation-name: bouncingball;
+        animation-duration: 1s;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+    }
+    @keyframes bouncingball {
+    0% {bottom:0; height:160px;}
+    25% {bottom: 160px;}
+    50% {bottom: 0px;}
+    75% {bottom:100px}
+    100% {bottom: 0px;}
+    }
+</style>
+<body>
+    <style>
+        body {
+            background-color: aliceblue;
+
+        }
+    </style>
+    <div class="circle"></div>
+</body>
+
+</html>
